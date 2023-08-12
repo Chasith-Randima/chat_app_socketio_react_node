@@ -35,7 +35,6 @@ io.on("connection", (socket) => {
     socket.to(data.room).emit("recieve_message", data);
   });
 
-  // socket.on("likeupdate", likes);
   socket.emit("likeupdate", likes);
   socket.on("liked", () => {
     likes++;
